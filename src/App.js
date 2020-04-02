@@ -1,26 +1,43 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+
+import Form from '../src/form';
+import SimpleTable from '../src/form/SimpleTable'
 
 function App() {
+
+  // const result = values;
+  const result = values => {
+   // console.log('result:', values);
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+    <div>
+          <Form onSubmit={result} />
+          <SimpleTable/>
     </div>
+
   );
 }
 
 export default App;
+// import React, { Component } from 'react';
+// import '@coreui/icons/css/coreui-icons.min.css';
+// import 'font-awesome/css/font-awesome.min.css';
+// import './scss/style.css';
+
+// import Form from '../src/form';
+
+// class App extends Component {
+//   result = (values) => {
+//     console.log('result is', values);
+//   }
+
+//   render() {
+//     return (
+//       <Form onSubmit={this.result}/>
+//     );
+//   }
+// }
+
+// export default App;
